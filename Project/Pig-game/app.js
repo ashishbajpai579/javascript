@@ -17,6 +17,7 @@ let gameActive;
 let randomNum1;
 let randomNum2;
 let targetScore = 100;
+let diceImages = '/images/';
 
 let dice1 = document.getElementById('dice-1');
 let dice2 = document.getElementById('dice-2');
@@ -51,8 +52,8 @@ const controller = {
       // console.log(randomNum1, randomNum2);
       dice1.style.display = 'block';
       dice2.style.display = 'block';
-      dice1.src = `dice-${randomNum1}.png`;
-      dice2.src = `dice-${randomNum2}.png`;
+      dice1.src = `${diceImages}dice-${randomNum1}.png`;
+      dice2.src = `${diceImages}dice-${randomNum2}.png`;
       // Update/add new number to current score if not 1 and if not two 6s in a row
       if (randomNum1 > 1 && randomNum2 > 1) {
         if (randomNum1 + randomNum2 !== 12) {
